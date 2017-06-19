@@ -15,17 +15,17 @@ export const routes = [
 	  		{
 	  			path: '/',
 	  			component: Recommend,
-	  			name: '推荐',
+	  			name: 'page1',
 	  			hidden: true
 	  		},{
 	  			path: '/video',
 	  			component: Video,
-	  			name: '视频',
+	  			name: 'page2',
 	  			hidden: true
 	  		},{
 	  			path: '/hot',
 	  			component: Hot,
-	  			name: '热点',
+	  			name: 'page3',
 	  			hidden: true
 	  		}
 	  	]

@@ -6,6 +6,7 @@ import 'mint-ui/lib/style.css'
 import App from './App'
 import router from './router'
 import Vuex from 'vuex'
+import Mock from './mock'
 Vue.use(Vuex)
 Vue.use(MintUI)
 Vue.config.productionTip = false
