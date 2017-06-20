@@ -15,3 +15,12 @@ export const addUser = params => {
 		console.log(response);
 	})
 }
+export const login = params => {
+	return axios.post(base + '/user/login', params)
+	.then((response) => {
+		console.log(response);
+	})
+}
+export const getImgURL = params => {
+	return axios.get(base + '/user/imgurl', params)
+}

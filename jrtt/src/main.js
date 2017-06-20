@@ -7,8 +7,10 @@ import App from './App'
 import router from './router'
 import Vuex from 'vuex'
 import Mock from './mock'
+import VueLazyload from 'vue-lazyload'
 Vue.use(Vuex)
 Vue.use(MintUI)
+Vue.use(VueLazyload)
 Vue.config.productionTip = false
 /* eslint-disable no-new */
 new Vue({

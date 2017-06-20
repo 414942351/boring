@@ -12,7 +12,7 @@ export default {
   name: 'app',
   data() {
     return {
-      navList: routes[0].children
+      navList: routes[2].children
     }
   }
 }
@@ -21,7 +21,7 @@ export default {
 <style lang="less">
 html, body {
   margin: 0;
-  padding: 0;
+  padding: 0px;
 }
 #app {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;

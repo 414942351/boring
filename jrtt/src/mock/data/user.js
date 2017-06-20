@@ -1,4 +1,12 @@
 const Mock = require('mockjs')
+export const LoginUsers = [
+	{
+		id: 1,
+		username: 'yanbing',
+		password: 'yanbing',
+		name: 'yan'
+	}
+];
 export const Users = [];
 for(let i = 0; i < 98; i++) {
 	Users.push({

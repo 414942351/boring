@@ -1,12 +1,23 @@
 import Vue from 'vue'
 import Router from 'vue-router'
+import Login from '../pages/login'
+import Reg from '../pages/Reg'
 import Home from '../pages/home'
 import Recommend from '../pages/Recommend'
 import Video from '../pages/Video'
 import Hot from '../pages/hot'
-
 Vue.use(Router)
 export const routes = [
+		{
+			path: '/login',
+			component: Login,
+			name: 'login'
+		},
+		{
+			path: '/reg',
+			component: Reg,
+			name: 'reg'
+		},
 	  {
 	  	path: '/',
 	  	// name: Home,
