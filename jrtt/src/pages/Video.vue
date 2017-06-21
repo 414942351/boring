@@ -1,11 +1,11 @@
 <template>
-	<div ref="container">
+	<div ref="container" >
 		<img v-for="item in imgURL" v-lazy.container ="item.imgUrl"/>
 	</div>
 </template>
 <script>
 	import {getImgURL} from '../api/api'
-import App from '../App'
+	import App from '../App'
 	export default {
 		data() {
 			return {
@@ -32,19 +32,19 @@ import App from '../App'
 	}
 </script>
 <style>	
-	img {
-		display: block;
-		height: 200px;
-		width: 100%;
-	}
 	img[lazy=loading] {
     /*your style here*/
+    width: 100%;
+    /*height: 10px;*/
   }
   img[lazy=error] {
     /*your style here*/
   }
   img[lazy=loaded] {
     /*your style here*/
+    width: 100%;
+
+    height: 200px;
   }
   /*
   or background-image
@@ -57,5 +57,6 @@ import App from '../App'
   }
   .yourclass[lazy=loaded] {
     /*your style here*/
+
   }
 </style>

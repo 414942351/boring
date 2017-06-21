@@ -2,14 +2,15 @@
 	<div>
 		recommend
 	</div>
-	
 </template>
 <script>
 	import {getUserList, addUser} from '../api/api'
 	export default {
 		data() {
 			return {
-				
+				alertData: {
+					msg: '孤舟蓑笠翁'
+				}
 			}
 		},
 		created() {

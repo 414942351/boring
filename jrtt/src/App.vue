@@ -12,12 +12,11 @@ export default {
   name: 'app',
   data() {
     return {
-      navList: routes[2].children
+      navList: routes[0].children
     }
   }
 }
 </script>
-
 <style lang="less">
 html, body {
   margin: 0;

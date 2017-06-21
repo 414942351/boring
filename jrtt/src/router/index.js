@@ -8,19 +8,8 @@ import Video from '../pages/Video'
 import Hot from '../pages/hot'
 Vue.use(Router)
 export const routes = [
-		{
-			path: '/login',
-			component: Login,
-			name: 'login'
-		},
-		{
-			path: '/reg',
-			component: Reg,
-			name: 'reg'
-		},
 	  {
 	  	path: '/',
-	  	// name: Home,
 	  	component: Home,
 	  	children: [
 	  		{
@@ -40,7 +29,17 @@ export const routes = [
 	  			hidden: true
 	  		}
 	  	]
-	  }
+	  },
+	  {
+			path: '/login',
+			component: Login,
+			name: 'login'
+		},
+		{
+			path: '/reg',
+			component: Reg,
+			name: 'reg'
+		},
   ]
 export default new Router({
   routes,
