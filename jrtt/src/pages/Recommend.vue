@@ -1,15 +1,22 @@
 <template>
 	<div>
-		recommend
+		<!-- <alert :showMsg="alertData.showMsg" :btnContent="alertData.btnContent"></alert> -->
+		<p>{{ total }}</p>
+	  <count v-on:increment="incrementTotal"></count>
+	  <count v-on:increment="incrementTotal"></count>
 	</div>
 </template>
 <script>
 	import {getUserList, addUser} from '../api/api'
+	import alert from '../components/alert/alert'
+	import count from '../components/count/count'
 	export default {
 		data() {
 			return {
+				total: 0,
 				alertData: {
-					msg: '孤舟蓑笠翁'
+					showMsg: '孤舟蓑笠翁',
+					btnContent: '确定'
 				}
 			}
 		},
@@ -22,6 +29,15 @@
 				username: 'yan',
 				password: 'ice'
 			})
+		},
+		components: {
+			alert,
+			count
+		},
+		methods: {
+			incrementTotal() {
+				this.total+=1
+			}
 		}
 	}
 </script>
