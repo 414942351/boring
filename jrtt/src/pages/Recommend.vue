@@ -1,5 +1,5 @@
 <template>
-<slider :imgList="imgList"></slider>
+<slider :items="imgList" :width="750" :height="350" :pagination="true" :auto-play="true" :speed="2000" :sync="true"></slider>
 </template>
 <script>
 	// import {getUserList, addUser} from '../api/api'
@@ -10,13 +10,11 @@
 			return {
 				imgList: [
 					{
-						imgUrl: 'http://img.mp.itc.cn/upload/20160811/d4d58e59d45440bba4810ed2d726b203_th.jpg'
+						src: 'http://img.mp.itc.cn/upload/20160811/d4d58e59d45440bba4810ed2d726b203_th.jpg'
 					},{
-						imgUrl: 'http://img.mp.itc.cn/upload/20160816/bf23531a39484c27873ddb8540aa5ca1_th.jpg',
+						src: 'http://img4q.duitang.com/uploads/blog/201408/28/20140828212148_yzCZF.thumb.700_0.jpeg'
 					},{
-						imgUrl: 'http://img4q.duitang.com/uploads/blog/201408/28/20140828212148_yzCZF.thumb.700_0.jpeg'
-					},{
-						imgUrl:'http://mvimg1.meitudata.com/557ea665e24cd7193.jpg'
+						src:'http://mvimg1.meitudata.com/557ea665e24cd7193.jpg'
 					}
 				]
 			}
