@@ -1,43 +1,33 @@
 <template>
-	<div>
-		<!-- <alert :showMsg="alertData.showMsg" :btnContent="alertData.btnContent"></alert> -->
-		<p>{{ total }}</p>
-	  <count v-on:increment="incrementTotal"></count>
-	  <count v-on:increment="incrementTotal"></count>
-	</div>
+<slider :imgList="imgList"></slider>
 </template>
 <script>
-	import {getUserList, addUser} from '../api/api'
-	import alert from '../components/alert/alert'
-	import count from '../components/count/count'
+	// import {getUserList, addUser} from '../api/api'
+	import slider from '../components/slider/slider'
+	// import count from '../components/count/count'
 	export default {
 		data() {
 			return {
-				total: 0,
-				alertData: {
-					showMsg: '孤舟蓑笠翁',
-					btnContent: '确定'
-				}
+				imgList: [
+					{
+						imgUrl: 'http://img.mp.itc.cn/upload/20160811/d4d58e59d45440bba4810ed2d726b203_th.jpg'
+					},{
+						imgUrl: 'http://img.mp.itc.cn/upload/20160816/bf23531a39484c27873ddb8540aa5ca1_th.jpg',
+					},{
+						imgUrl: 'http://img4q.duitang.com/uploads/blog/201408/28/20140828212148_yzCZF.thumb.700_0.jpeg'
+					},{
+						imgUrl:'http://mvimg1.meitudata.com/557ea665e24cd7193.jpg'
+					}
+				]
 			}
 		},
 		created() {
-			getUserList({
-				user: 'Yan'
-			});
-			// getUserList();
-			addUser({
-				username: 'yan',
-				password: 'ice'
-			})
+
 		},
 		components: {
-			alert,
-			count
+			slider
 		},
 		methods: {
-			incrementTotal() {
-				this.total+=1
-			}
 		}
 	}
 </script>

@@ -15,7 +15,7 @@ export const routes = [
 	  		{
 	  			path: '/',
 	  			component: Recommend,
-	  			name: 'page1',
+	  			name: 'Recommend',
 	  			hidden: true
 	  		},{
 	  			path: '/video',
