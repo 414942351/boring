@@ -4,7 +4,7 @@
 		<router-link class="navbar-item" 
 								 v-for="item in routes" 
 								:key="item.id"
-								:to="item.path" 
+								:to="item.path"
 								 tag="li"
 								 exact>
 								 {{item.name}}
@@ -33,14 +33,10 @@
 		border-bottom: 1px solid #f3f3f3;
 		justify-content: flex-end;
 		.routes-wrapper {
-			// width: 100%;
 			float: right;
-			// flex-direction: right;
 			overflow: hidden;
-
 		}
 		.navbar-item {
-			// float: left;
 			display: inline-block;
 			color: #E4A813;
 			margin-right: 10px;

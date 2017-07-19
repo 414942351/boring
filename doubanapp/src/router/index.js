@@ -1,7 +1,5 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-// import Hello from '@/components/Hello'
-import Request from '@/components/Request'
 import Home from '@/pages/Home'
 import Movie from '@/pages/Movie'
 import Book from '@/pages/Book'

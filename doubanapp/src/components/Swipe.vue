@@ -1,6 +1,6 @@
 <template>
 	<div class="swipe-wrapper">
-		
+		<div v-for="item in itemList">fjdsk</div>
 	</div>
 </template>
 <script>
