@@ -1,9 +1,9 @@
 <template>
 	<div class="home-wrapper">
 		<Swipe v-if="itemList.length"
-		 :itemList="itemList" 
-		 :height="200" 
-		 :width="'100px'"
+		 :itemList="itemList"
+		 :height="200"
+		 :width="'100%'"
 		></Swipe>
 	</div>
 </template>

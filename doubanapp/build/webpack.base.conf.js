@@ -37,6 +37,10 @@ module.exports = {
         loader: 'style-loader!css-loader!less-loader',
       },
       {
+        test: /\.stylus$/,
+        loader: 'style-loader!css-loader!stylus-loader',
+      },
+      {
         test: /\.js$/,
         loader: 'babel-loader',
         include: [resolve('src'), resolve('test')]
