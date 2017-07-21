@@ -3,7 +3,6 @@
     <slot></slot>
   </div>
 </template>
-
 <style>
 .vue-waterfall {
   position: relative;

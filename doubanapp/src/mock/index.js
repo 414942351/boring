@@ -5,7 +5,7 @@ for(let i = 0; i < 4; i++) {
 		src: Mock.Random.image()
 	}))
 }
-console.log(data);
+// console.log(data);
 export {
 	data
 }

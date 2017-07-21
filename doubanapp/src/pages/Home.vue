@@ -1,33 +1,41 @@
 <template>
 	<div class="home-wrapper">
-		
+		<ArcProgress :config="config"></ArcProgress>
 	</div>
 </template>
 <script>
-	import Swipe from '../components/swipe'
+	import ArcProgress from '../components/ArcProgress'
 	import Api from '../api'
 	export default {
 		data() {
 			return {
-				itemList: []
+				itemList: [],
+				config: {
+					start: 0,//起始弧度
+					to: Math.PI,//结束弧度
+					scale: Math.PI/90,//速度
+					end: 0,//每次结束弧度
+					total: 2 * Math.PI, 
+					wdith: 400,
+					height: 400,
+				}
 			}
 		},
 		created() {
 			this.getInitData();
-
 		},
 		methods: {
 			getInitData() {
 				let _this = this;
 				_this.$axios.get('/imageList')
-				.then((response)=> {
-					console.log(response.data);
+				.then((response) => {
+					// console.log(response.data);
 					_this.itemList = response.data;
 				})
 			}
 		},
 		components: {
-			Swipe
+			ArcProgress
 		}
 	}
 </script>
