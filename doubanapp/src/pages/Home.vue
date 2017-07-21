@@ -1,24 +1,26 @@
 <template>
 	<div class="home-wrapper">
-		<ArcProgress :config="config"></ArcProgress>
+	<Clendar></Clendar>
+		<!-- <ArcProgress :config="config"></ArcProgress> -->
 	</div>
 </template>
 <script>
-	import ArcProgress from '../components/ArcProgress'
+	import Calendar from '../components/Calendar'
+	// import ArcProgress from '../components/ArcProgress'
 	import Api from '../api'
 	export default {
 		data() {
 			return {
 				itemList: [],
-				config: {
-					start: 0,//起始弧度
-					to: Math.PI,//结束弧度
-					scale: Math.PI/90,//速度
-					end: 0,//每次结束弧度
-					total: 2 * Math.PI, 
-					wdith: 400,
-					height: 400,
-				}
+				// config: {
+				// 	start: 0,//起始弧度
+				// 	to: Math.PI,//结束弧度
+				// 	scale: Math.PI/90,//速度
+				// 	end: 0,//每次结束弧度
+				// 	total: 2 * Math.PI, 
+				// 	wdith: 400,
+				// 	height: 400,
+				// }
 			}
 		},
 		created() {
@@ -35,7 +37,7 @@
 			}
 		},
 		components: {
-			ArcProgress
+			Calendar
 		}
 	}
 </script>
