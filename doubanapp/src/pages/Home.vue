@@ -1,6 +1,6 @@
 <template>
 	<div class="home-wrapper">
-	<Clendar></Clendar>
+	<!-- <Clendar></Clendar> -->
 		<!-- <ArcProgress :config="config"></ArcProgress> -->
 	</div>
 </template>
@@ -23,7 +23,12 @@
 				// }
 			}
 		},
+		// beforeRouteEnter(to, from, next) {
+			
+		// },
 		created() {
+			console.log()
+			// console.log(~~2)
 			this.getInitData();
 		},
 		methods: {
