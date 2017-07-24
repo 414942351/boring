@@ -1,6 +1,6 @@
 <template>
 	<div class="home-wrapper">
-	<!-- <Clendar></Clendar> -->
+	<Calendar></Calendar>
 		<!-- <ArcProgress :config="config"></ArcProgress> -->
 	</div>
 </template>
