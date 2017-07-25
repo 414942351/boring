@@ -46,10 +46,6 @@ function eraseCookie(key, isAll) {
 	setCookie(key, "", -1);
 }
 
-
-
-
-
 //DOM相关
 
 //视口尺寸
