@@ -1,11 +1,12 @@
 <template>
 	<div class="home-wrapper">
-	<Calendar></Calendar>
+	<!-- <Calendar></Calendar> -->
 		<!-- <ArcProgress :config="config"></ArcProgress> -->
 	</div>
 </template>
 <script>
 	import Calendar from '../components/Calendar'
+	import * as util from '../utils'
 	// import ArcProgress from '../components/ArcProgress'
 	import Api from '../api'
 	export default {
@@ -27,9 +28,9 @@
 			
 		// },
 		created() {
-			console.log()
+			console.log(util.formatDate(423453245235))
 			// console.log(~~2)
-			this.getInitData();
+			// this.getInitData();
 		},
 		methods: {
 			getInitData() {
