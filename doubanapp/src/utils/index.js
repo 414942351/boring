@@ -4,7 +4,6 @@ function formatDate(time) {
   let year = date.getFullYear()
   let month = date.getMonth() + 1
   let day = date.getDate()
-
   let hour = date.getHours()
   let minute = date.getMinutes()
   let second = date.getSeconds()
@@ -12,12 +11,12 @@ function formatDate(time) {
 }
 function formatNumber(n) {
   n = n.toString()
-  return n[1] ? n : '0' + n
+  return n[1] ? n : `0${n}`
 }
 //从url中获取参数
 function getParamsFromUrl(name) {
 	name = name.replace(/[\[]/, "\\[").replace(/[\]]/, "\\]");
-  let regex = new RegExp("[\\?&]" + name + "=([^&#]*)"),
+  let regex = new RegExp(`[\\?&]${name}=([^&#]*)`),
       results = regex.exec(location.search);
   return results === null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
 }
@@ -33,7 +32,7 @@ function setCookie(key, value, days) {
 }
 //readCookie
 function readCookie(name) {
-	let nameEQ = name + "=";
+	let nameEQ = `${name}=`
   let ca = document.cookie.split(';');
   for (let i = 0; i < ca.length; i++) {
       let c = ca[i];
@@ -46,10 +45,92 @@ function readCookie(name) {
 function eraseCookie(key, isAll) {
 	setCookie(key, "", -1);
 }
-// const setData
+
+
+
+
+
+//DOM相关
+
+//视口尺寸
+function getViewportOffset() {
+	if(window.innerWidth) {
+		return {
+			x: window.innerWidth,
+			y: window.innerHeight
+		}
+	}
+	if(document.compatMode == ' CSS1Compat') {
+		return {
+			w: document.documentElement.clientWidth,
+			h: document.documentElement.clientHeight
+		}
+	}else if(document.compatMode == 'BackCompat') {
+		return {
+			w: document.body.clientWidth,
+			h: document.body.clientHeight
+		}
+	}
+}
+
+//查看元素几何尺寸
+function getElementOffset(ele) {
+	let box = ele.getBoundingClientRect();
+	let w = box.width || (box.right - box.left);
+	let h = box.height || (box.bottom - box.top);
+	return {
+		w,
+		h
+	}
+}
+//获取元素相对于文档的坐标
+
+function getElementPosition(ele) {
+	let x = 0;
+	let y = 0;
+	while(ele != document.body) {
+		x += ele.offsetLeft;
+		y += ele.offsetTop;
+		ele = ele.offsetParent;
+	}
+	return {
+		x,
+		y
+	}
+}
+
+//查询样式
+function getStyle(obj, styleProp) {
+	if(obj.currentStyle) {
+		return obj.currentStyle[styleProp];
+	}else {
+		return window.getComputedStyle(obj, null)[styleProp];
+	}
+}
+
+//常用方法
 export {
 	formatDate,
 	getParamsFromUrl,
 	setCookie,
 	eraseCookie
 }
+
+//DOM相关
+export {
+	getViewportOffset,//视口尺寸
+	getElementOffset,//查看元素几何尺寸
+	getElementPosition,//获取元素相对于文档的坐标
+	getStyle,//查询样式
+
+}
+
+
+
+
+
+
+
+
+
+
