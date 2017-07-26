@@ -30,9 +30,6 @@
 			}
 		},
 		created() {
-			// console.log(this.config.start)
-			// this.to = 2 *this.to * Math.PI;
-			console.log(this.to)
 			setTimeout(()=> {
 				this.init();
 			})

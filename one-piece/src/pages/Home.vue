@@ -1,5 +1,7 @@
 <template>
 	<div class="home-wrapper">
+		<div class="toast-wrapper" v-show="bShowToast"></div>
+		<div class="turn-table"></div>
 	<!-- <Calendar></Calendar> -->
 		<!-- <ArcProgress :config="config"></ArcProgress> -->
 	</div>
@@ -7,11 +9,11 @@
 <script>
 	import Calendar from '../components/Calendar'
 	import * as util from '../utils'
-	// import ArcProgress from '../components/ArcProgress'
 	import Api from '../api'
 	export default {
 		data() {
 			return {
+				bShowToast: false,
 				itemList: [],
 				// config: {
 				// 	start: 0,//起始弧度
@@ -28,9 +30,13 @@
 			
 		// },
 		created() {
-			console.log(util.formatDate(423453245235))
+			// setTimeout(()=> {
+			// 	this.bShowToast = false;
+			// }, 1500);
+			// console.log(util.formatDate(423453245235))
 			// console.log(~~2)
 			// this.getInitData();
+
 		},
 		methods: {
 			getInitData() {
@@ -47,6 +53,19 @@
 		}
 	}
 </script>
-<style>
-	
+<style lang="stylus">
+	// @import ''
+	.toast-wrapper
+		position fixed 
+		height 100%
+		width 100%
+		background url(../assets/resource/index_toast.jpg)
+		background-repeat no-repeat
+		background-size cover
+	.turn-table 
+		height 200px
+		width 200px
+		background red	
+		margin 0 auto
+		margin-top 200px
 </style>
