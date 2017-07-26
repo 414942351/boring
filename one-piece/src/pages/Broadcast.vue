@@ -10,7 +10,7 @@
 
 <script>
 	import store from '../store'
-	console.log(store.state)
+	// console.log(store.state)
 	// const store = new Vuex.Store({
 	// 	state: {
 	// 		count: 0
@@ -28,10 +28,13 @@
 		},
 		methods: {
 			increment() {
-				store.commit('increment')
+				store.commit({
+					type: 'increment',
+					amount: 10
+				})
 			},
 			decrement() {
-				store.commit('decrement')
+				store.commit('SOME_MUTATIONS')
 			}
 		}
 	}

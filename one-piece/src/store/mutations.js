@@ -1,9 +1,13 @@
+import { SOME_MUTATION } from './mutation-types'
 export default {
-	increment: state => {
-		state.count++
-	},
-	decrement: state => {
+	[SOME_MUTATION](state) {
+		console.log('some mutation')
 		state.count--
-		console.log('decremnet')
-	}
+	},
+	increment: (state, payload) => {
+		state.count += payload.amount
+	},
+	// decrement: state => {
+	// 	state.count--
+	// }
 }
