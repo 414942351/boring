@@ -6,7 +6,11 @@ export default {
 	},
 	increment: (state, payload) => {
 		state.count += payload.amount
+		console.log('increment')
 	},
+	someMutation: ()=> {
+		console.log('someMutation')
+	}
 	// decrement: state => {
 	// 	state.count--
 	// }
