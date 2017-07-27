@@ -14,6 +14,7 @@
   },
   "dependencies": {
     "axios-mock-adapter": "^1.9.0",
+    "element-ui": "^1.4.0",
     "less": "^2.7.2",
     "less-loader": "^4.0.5",
     "moment": "^2.18.1",
