@@ -8,8 +8,9 @@ import axios from 'axios'
 import Vuex from 'vuex'
 import store from './store'
 import Validator from 'vue-validator'
+import Swiper from 'swiper'
 import App from './App'
-Vue.use(ElementUI)
+Vue.use(ElementUI);
 Vue.use(Vuex);
 Vue.use(Validator);
 Vue.config.productionTip = false;
